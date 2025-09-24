@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento de Notas TI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+</head>
+<body>
+    <main>
+        <div id="gestor-notas-app">
+            <header class="app-header">
+                <h1>ACOMPANHAMENTO DE NOTAS TI</h1>
+                <img src="logo.png" alt="Logo da Empresa" class="app-logo">
+            </header>
+            <div class="container">
+                <section id="form-section">
+                    <details open>
+                        <summary><h2>Registrar Nova Nota Fiscal</h2></summary>
+                        <form id="form-nota">
+                            <div class="form-grid">
+                                <input type="text" id="numero_nota" placeholder="Número da Nota *" required>
+                                <input type="text" id="fornecedor" placeholder="Fornecedor *" required>
+                                <input type="number" id="valor" placeholder="Valor (R$) *" step="0.01" required>
+                                <input type="text" id="numero_lancamento" placeholder="Nº Lançamento">
+                                <input type="text" id="numero_pedido" placeholder="Nº Pedido">
+                                <input type="text" id="tecnico_responsavel" placeholder="Técnico Responsável">
+                                <div class="date-fields">
+                                    <label for="data_emissao">Data de Emissão *:</label>
+                                    <input type="date" id="data_emissao" required>
+                                </div>
+                                <div class="date-fields">
+                                     <label for="data_vencimento">Data de Vencimento *:</label>
+                                    <input type="date" id="data_vencimento" required>
+                                </div>
+                            </div>
+                            <button type="submit">Adicionar Nota</button>
+                        </form>
+                    </details>
+                </section>
+                <section id="list-section">
+                    <div class="list-header">
+                        <h2>Notas Fiscais</h2>
+                    </div>
+                    <div class="filtros-container">
+                        <input type="text" id="filtro-busca" placeholder="🔎 Buscar por texto...">
+                        <div class="filtro-data-grupo">
+                            <label for="filtro-data-inicio">Vencimento de:</label>
+                            <input type="date" id="filtro-data-inicio">
+                        </div>
+                        <div class="filtro-data-grupo">
+                            <label for="filtro-data-fim">Até:</label>
+                            <input type="date" id="filtro-data-fim">
+                        </div>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="mostrar-pagas">
+                            Mostrar notas pagas
+                        </label>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Vencimento</th>
+                                    <th>Fornecedor</th>
+                                    <th>Valor</th>
+                                    <th>Nº Nota</th>
+                                    <th>Nº Lançamento</th>
+                                    <th>Nº Pedido</th>
+                                    <th>Técnico Responsável</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-notas">
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Editar Nota Fiscal</h2>
+            <form id="edit-form-nota">
+                 <input type="hidden" id="edit-id">
+                <div class="form-grid">
+                    <input type="text" id="edit-numero_nota" placeholder="Número da Nota *" required>
+                    <input type="text" id="edit-fornecedor" placeholder="Fornecedor *" required>
+                    <input type="number" id="edit-valor" placeholder="Valor (R$) *" step="0.01" required>
+                    <input type="text" id="edit-numero_lancamento" placeholder="Nº Lançamento">
+                    <input type="text" id="edit-numero_pedido" placeholder="Nº Pedido">
+                    <input type="text" id="edit-tecnico_responsavel" placeholder="Técnico Responsável">
+                    <div class="date-fields">
+                        <label for="edit-data_emissao">Data de Emissão *:</label>
+                        <input type="date" id="edit-data_emissao" required>
+                    </div>
+                    <div class="date-fields">
+                         <label for="edit-data_vencimento">Data de Vencimento *:</label>
+                        <input type="date" id="edit-data_vencimento" required>
+                    </div>
+                </div>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 - Desenvolvido para o Setor de TI da Ferreira Costa</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
