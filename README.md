@@ -1,18 +1,4 @@
-Com certeza! Um bom README.md no GitHub é o cartão de visitas do seu projeto. Ele ajuda outras pessoas (e você mesmo no futuro) a entenderem o que o projeto faz e como utilizá-lo.
 
-Aqui está um texto completo, formatado em Markdown, que você pode copiar e colar diretamente em um arquivo chamado README.md no seu projeto no GitHub.
-
-Como Usar:
-No seu repositório do GitHub, clique em "Add file" e depois em "Create new file".
-
-Nomeie o arquivo como README.md.
-
-Copie e cole o texto abaixo no editor.
-
-(Opcional) Tire um print da tela do seu sistema, adicione ao repositório e mude o nome no link da imagem abaixo.
-
-Sistema de Acompanhamento de Notas Fiscais para TI
-(Dica: Adicione um screenshot do seu projeto ao repositório e substitua o link acima)
 
 📝 Descrição
 Este é um sistema web simples, projetado para rodar localmente, que tem como objetivo principal o registro e acompanhamento de notas fiscais. Foi desenvolvido para auxiliar pequenos departamentos, como o setor de TI, a gerenciar prazos de pagamento de fornecedores de forma visual e intuitiva.
